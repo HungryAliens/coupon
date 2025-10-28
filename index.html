@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-key="title">쿠폰 페이지</title> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="public/favicon-black.png" type="image/png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="public/favicon-white.png" type="image/png" media="(prefers-color-scheme: dark)" />
+</head>
+<body>
+  <div>
+    <select id="language-dropdown"></select> 
+  </div>
+
+  <div class="coupon-container">
+    <h1 data-i18n-key="coupon_container_title">쿠폰 사용</h1> 
+        
+    <label for="server-dropdown" data-i18n-key="server_dropdown_label">서버 선택</label>
+    <select id="server-dropdown">
+      <option value="" data-i18n-key="server_dropdown_placeholder">-- 서버를 선택하세요 --</option>
+    </select>
+
+    <label for="account-name" data-i18n-key="account_name_label">복구 이메일</label>
+    <input type="text" id="account-name" placeholder="복구 이메일을 입력하세요" data-i18n-placeholder-key="account_name_placeholder">
+
+    <label for="coupon-code" data-i18n-key="coupon_code_label">쿠폰 번호</label>
+    <input type="text" id="coupon-code" placeholder="쿠폰 번호를 입력하세요" data-i18n-placeholder-key="coupon_code_placeholder">
+
+    <button id="redeem-button" data-i18n-key="redeem_button">사용하기</button>
+  </div>
+
+  <div id="result-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 data-i18n-key="modal_title">쿠폰 사용 결과</h2>
+      <p id="modal-message"></p>
+      <button id="modal-close-button" data-i18n-key="modal_confirm_button">확인</button>
+    </div>
+  </div>
+    
+  <div class="background-image-container"></div>
+    
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
